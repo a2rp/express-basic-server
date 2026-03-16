@@ -58,17 +58,6 @@ GET /
 
 ---
 
-## Project Structure
-
-express-basic-server
-│
-├── index.js
-├── package.json
-├── package-lock.json
-└── .gitignore
-
----
-
 ## Purpose
 
 This repository demonstrates the foundation of an Express.js backend server.
@@ -79,3 +68,4 @@ It serves as the starting point for building scalable backend applications.
 ## Author
 
 Ashish Ranjan
+https://www.ashishranjan.net

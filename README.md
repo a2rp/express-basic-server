@@ -1,74 +1,50 @@
-# express-basic-server
+# Express Basic Server
 
-A minimal Express.js backend server demonstrating basic routing and a health check endpoint.  
-This project is part of a backend foundations series where each repository focuses on solving one specific backend concept.
-
----
+A minimal Node.js and Express server with JSON root and health-check endpoints.
 
 ## Features
 
-- Basic Express server setup
-- Root endpoint `/`
-- Health check endpoint `/health`
-- Environment based port configuration
-- Simple JSON responses
+- `GET /` returns a basic service response.
+- `GET /health` reports status, process uptime in seconds, and the current timestamp.
+- The server uses the `PORT` environment variable or defaults to port `1198`.
 
----
-
-## Tech Stack
-
-- Node.js
-- Express.js
-
----
-
-## Installation
+## Run locally
 
 ```bash
-## Clone the repository
 git clone https://github.com/a2rp/express-basic-server.git
-
-## Go to project directory
 cd express-basic-server
-
-## Install dependencies
 npm install
-
-## Running the server
-Development mode
-
-## Production mode
-npm start
+npm run dev
 ```
 
-## API Endpoints
+Use `npm start` to run without Nodemon. The server prints the port when it starts.
 
-### Root
+## API endpoints
 
-GET /
-
-## Response
+### `GET /`
 
 ```json
 {
-    "message": "Express Basic Server Running",
-    "status": "success"
+  "message": "Express Basic Server Running",
+  "status": "success"
 }
 ```
 
----
+### `GET /health`
 
-## Purpose
+```json
+{
+  "status": "OK",
+  "uptime": 12.34,
+  "timestamp": "2026-11-10T12:00:00.000Z"
+}
+```
 
-This repository demonstrates the foundation of an Express.js backend server.
-It serves as the starting point for building scalable backend applications.
+The uptime and timestamp values are generated when the request is handled.
 
----
+## Stack
 
-## Author
-
-Ashish Ranjan
-https://www.ashishranjan.net
+Node.js, Express 5, and Nodemon.
 
 ## Links
 
@@ -83,5 +59,5 @@ https://www.ashishranjan.net
 ## Support
 
 - Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
+- Buy Me a Coffee: [https://buymeacoffee.com/ashishranjan](https://buymeacoffee.com/ashishranjan)
 - Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
